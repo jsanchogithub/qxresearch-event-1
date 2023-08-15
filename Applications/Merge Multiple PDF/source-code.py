@@ -9,5 +9,5 @@ merger.write("Final_pdf2.pdf")
 merger.close()
 
 for items in os.listdir():
-  if items != ( 'Final_pdf.pdf') and items.endswith('.pdf'):
+  if items != ( 'Final_pdf2.pdf') and items.endswith('.pdf'):
     os.remove(items)
