@@ -5,9 +5,9 @@ merger = PdfFileMerger()
 for items in os.listdir():
   if items.endswith('.pdf'):
     merger.append(items)
-merger.write("Final_pdf2.pdf")
+merger.write("Final_pdf3.pdf")
 merger.close()
 #
 for items in os.listdir():
-  if items != ( 'Final_pdf2.pdf') and items.endswith('.pdf'):
+  if items != ( 'Final_pdf3.pdf') and items.endswith('.pdf'):
     os.remove(items)
