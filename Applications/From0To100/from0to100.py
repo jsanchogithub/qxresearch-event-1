@@ -26,6 +26,8 @@
 # S5 - --- - Operators
 # S5 - 025 - Operators in Python (026 & 027 & 028)
 # S5 - 029 - Assignment operators
+# S5 - 030 - Comparison operators
+# S5 - 031 - even (par) and odd numbers (even)
 
 
 ###############################################################################################
@@ -125,10 +127,21 @@ print(f'resDint = {resDint}')
 print(f'resM = {resM}')
 ###############################################################################################
 print('S5 - 029 - Assignment operators')
-
-
-
-
+x = 5
+x += 1
+print(x)
+x /= 2
+print(x)
+###############################################################################################
+print('S5 - 030 - Comparison operators')
+a = 4
+b = 2
+result = a == b   # first evaluate right side
+print(f'result == {result}')
+result = a >= b   # first evaluate right side
+print(f'result == {result}')
+###############################################################################################
+print('S5 - 031 - even (par) and odd numbers (even)')
 
 
 
