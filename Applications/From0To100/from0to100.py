@@ -27,7 +27,18 @@
 # S5 - 025 - Operators in Python (026 & 027 & 028)
 # S5 - 029 - Assignment operators
 # S5 - 030 - Comparison operators
-# S5 - 031 - even (par) and odd numbers (even)
+# S5 - 031 - even (par) and odd numbers (even) (032)
+# S5 - 032 - Logical operators (034 & 035 & 036 & 037)
+# S5 - 038 - Simplified syntax logical operators (.. 042)
+###############################################################################################
+# S6 - --- - Control structures
+# S6 - 043 - if else + DEBUG
+# S6 - 046 - Number to Text
+# S6 - 046 - simplified if syntax (047..051)
+###############################################################################################
+# S7 - --- - Loops
+# S7 - 052 - While (053..056)
+# S7 - 057 - For
 
 
 ###############################################################################################
@@ -142,6 +153,47 @@ result = a >= b   # first evaluate right side
 print(f'result == {result}')
 ###############################################################################################
 print('S5 - 031 - even (par) and odd numbers (even)')
+# myNum = int(input("Number: "))
+myNum = 5
+if myNum % 2 == 0:
+    print("Even")
+else:
+    print("odd")
+###############################################################################################
+print('S5 - 032 - Logical operators')
+a = False
+b = True
+print(a and b)
+print(a or b)
+print(not a)
+###############################################################################################
+print('S5 - 037 - Simplified syntax logical operators')
+t = 3
+if (5 <= t <= 10):
+    print('Yes!')
+###############################################################################################
+print('SS5 - 043 - if else + DEBUG')
+condition = True # 'Hello'
+if condition == True:
+    print('It\'s True')
+elif condition == False:
+    print('It\'s False')
+else:
+    print('Unknown')
+###############################################################################################
+print('S5 - 046 - simplified if syntax')
+cond = True
+print('simplified: True') if cond else print('simplified: False')
+###############################################################################################
+print('S7 - 052 - While')
+counter = 0
+while counter < 3:
+    print(counter)
+    counter += 1
+else:
+    print('End')
+###############################################################################################
+print('S7 - 057 - For')
 
 
 
