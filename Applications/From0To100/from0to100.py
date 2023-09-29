@@ -1,3 +1,13 @@
+###############################################################################################
+# S1 - --- - Wellcome
+# S1 - 001 - Wellcome
+###############################################################################################
+# S2 - --- - Intro
+# S2 - 002 - Install Python 3
+# S2 - 003 - Install PyCharm
+# S2 - 004 - Some advices
+# S2 - 005 - Python 'characteristics'
+
 """
 from PyPDF4 import PdfFileMerger
 import os 
