@@ -39,6 +39,11 @@
 # S7 - --- - Loops
 # S7 - 052 - While (053..056)
 # S7 - 057 - For
+# S7 - 058 - Break
+# S7 - 059 - Continue
+###############################################################################################
+# S8 - --- - Collections
+# S8 - 060 - Lists
 
 
 ###############################################################################################
@@ -193,9 +198,32 @@ while counter < 3:
 else:
     print('End')
 ###############################################################################################
-print('S7 - 057 - For')
-
-
+print('S7 - 057 - For - Iterate for lists')
+x = "Armenia's Capital is Erevan"
+for letter in x:
+    print(letter)
+else:
+    print('End!')
+###############################################################################################
+print('S7 - 058 - Break')
+x = "Armenia's Capital is Erevan"
+for letter in x:
+    print(letter)
+    if letter == 'i':
+        break
+else:
+    print('End!')
+###############################################################################################
+print('S7 - 059 - Continue')
+for i in range(6):
+    if i % 2 != 0:
+        continue   # next i
+    print(f'Value: {i}')
+###############################################################################################
+print('S8 - 060 - Lists')
+capitals = ['Erevan','Armenia']
+print(capitals)
+print(capitals[0])
 
 """
 from PyPDF4 import PdfFileMerger
