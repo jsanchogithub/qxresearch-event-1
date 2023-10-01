@@ -44,6 +44,22 @@
 ###############################################################################################
 # S8 - --- - Collections
 # S8 - 060 - Lists
+# S8 - 061 - Lists - 2
+# S8 - 065 - Tuples
+# S8 - 069 - Set
+# S8 - 070 - Dictionaries (071)
+###############################################################################################
+# S9 - --- - Functions
+# S9 - 072 - Functions (073)
+# S9 - 074 - Return in Functions
+# S9 - 075 - Default Values
+# S9 - 076 - Variable Arguments (..080)
+# S9 - 081 - Variable Arguments Key-Value pairs
+# S9 - 082 - Different datatypes as arguments
+# S9 - 083 - Recursive functions (..089)
+###############################################################################################
+# S9 - --- - Classes & Objects
+# S9 - 090 - Classes & Objects
 
 
 ###############################################################################################
@@ -96,7 +112,7 @@ vCapital1p = "Baku"
 vCapital1e = "Baku"
 vCountry2e = "Armenia"
 vCapital2e = "Erevan"
-print("Armenia's Capital is "+vCapital2e)  # concatenation
+print("Armenia's Capital is " + vCapital2e)  # concatenation
 print("Armenia's Capital is ""Erevan")  # concatenation
 ###############################################################################################
 print('# S4 - 017 - String processing - 2')
@@ -104,7 +120,7 @@ print("Armenia's Capital is", vCapital2e)  # concatenation 2
 # whitespace after ' . It adds whitespace between the arguments
 # Sobrecarga de operadores: + adds two numbers, or concats two strings.
 # cast
-print("Addition:", int("1")+int("2"))
+print("Addition:", int("1") + int("2"))
 # https://peps.python.org/pep-0008/
 ###############################################################################################
 print('S4 - 018 - Boolean types')
@@ -113,9 +129,9 @@ print('S4 - 018 - Boolean types')
 myBool = 3 < 2
 print(myBool)
 if myBool:
-    print(myBool)   # indentation marks the if block
+    print(myBool)  # indentation marks the if block
 else:
-    print("It is False!")   # indentation marks the if block
+    print("It is False!")  # indentation marks the if block
 
 print("End...")
 ###############################################################################################
@@ -128,7 +144,7 @@ print('S4 - 020 - User entry processing (input) - 2')
 if False:
     n1 = int(input("n1: "))
     n2 = int(input("n2: "))
-    print(n1+n2)
+    print(n1 + n2)
 ###############################################################################################
 print('S5 - 025 - Operators in Python')
 # +, -, /, *, Integer div //, Exponentiation **, Modulo/Remainder %
@@ -152,9 +168,9 @@ print(x)
 print('S5 - 030 - Comparison operators')
 a = 4
 b = 2
-result = a == b   # first evaluate right side
+result = a == b  # first evaluate right side
 print(f'result == {result}')
-result = a >= b   # first evaluate right side
+result = a >= b  # first evaluate right side
 print(f'result == {result}')
 ###############################################################################################
 print('S5 - 031 - even (par) and odd numbers (even)')
@@ -178,7 +194,7 @@ if (5 <= t <= 10):
     print('Yes!')
 ###############################################################################################
 print('SS5 - 043 - if else + DEBUG')
-condition = True # 'Hello'
+condition = True  # 'Hello'
 if condition == True:
     print('It\'s True')
 elif condition == False:
@@ -217,13 +233,103 @@ else:
 print('S7 - 059 - Continue')
 for i in range(6):
     if i % 2 != 0:
-        continue   # next i
+        continue  # next i
     print(f'Value: {i}')
 ###############################################################################################
 print('S8 - 060 - Lists')
-capitals = ['Erevan','Armenia']
+capitals = ['Erevan', 'Armenia']
 print(capitals)
 print(capitals[0])
+print(capitals[-1])
+print(capitals[0:1])
+print(capitals[0:2])  # does not include last!
+capitals[1] = '...'
+print(capitals)
+capitals[1] = 'Armenia'
+print(capitals)
+for capcon in capitals:
+    print(capcon)
+else:
+    print('No more caps')
+print(len(capitals))
+###############################################################################################
+print('S8 - 065 - Tuples (Unmutable)')
+capitals = ('Erevan', 'Armenia')
+print(capitals)
+###############################################################################################
+print('S8 - 069 - Set')
+capitals = {'Erevan', 'Armenia'}
+print(capitals)
+###############################################################################################
+print('S8 - 070 - Dictionaries')
+capitals = {
+    'Armenia': 'Erevan',
+    'Azerbaijan': 'Baku'
+}
+print(capitals)
+print(capitals['Armenia'])
+
+for country, capital in capitals.items():
+    print(f'Capital of {country} is {capital}')
+
+for country in capitals.keys():
+    print(country)
+###############################################################################################
+print('S9 - 072 - Functions')
+
+
+def print_capitals(my_country):
+    print(capitals[my_country])
+
+
+print_capitals('Armenia')
+
+###############################################################################################
+print('S9 - 074 - Return in Functions')
+
+
+def f_print_capitals(my_country):
+    return 'Capital = ' + capitals[my_country]
+
+
+print(f_print_capitals('Armenia'))
+print(f'f print: {f_print_capitals("Armenia")}')
+
+###############################################################################################
+print('S9 - 075 - Default Values')
+
+
+def f_print_capitals(my_country='Armenia'):
+    return 'Capital = ' + capitals[my_country]
+
+
+print(f_print_capitals())
+print(f'f print: {f_print_capitals()}')
+print(f_print_capitals('Azerbaijan'))
+print(f'f print: {f_print_capitals("Azerbaijan")}')
+
+###############################################################################################
+print('S9 - 076 - Variable Arguments')
+
+
+def i_print_capitals(*my_country):
+    for m_country in my_country:
+        print('Capital = ' + capitals[m_country])
+
+
+i_print_capitals('Azerbaijan')
+i_print_capitals('Azerbaijan', 'Armenia')
+
+
+###############################################################################################
+print('S9 - 080 - Variable Arguments Key-Value pairs')
+
+def listarTerminos(**terminos):
+    for llave, valor in terminos.items():
+        print(f'{llave}: {valor}')
+
+listarTerminos(IDE='Integrated Developement Environment', PK='Primary Key')
+listarTerminos(DBMS='Database Management System')
 
 """
 from PyPDF4 import PdfFileMerger
